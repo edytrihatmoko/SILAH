@@ -1,0 +1,48 @@
+1. Install QGIS
+Download and install the latest version of QGIS (compatible with SILAH V045) from the official QGIS website.
+2. Install Required Python Libraries
+SILAH V045 requires several Python libraries. Follow these steps:
+
+a. Locate the Python Environment Used by QGIS:
+Open OSGeo4W Shell (bundled with QGIS).
+Verify the Python version by typing:
+bash
+Copy code
+python --version
+Ensure it matches the version required for SILAH V045.
+b. Install Dependencies:
+Run the following commands in OSGeo4W Shell:
+
+bash
+Copy code
+python -m pip install --upgrade pip
+python -m pip install geopandas shapely fiona numpy pyproj rasterstats
+c. Install GDAL:
+If GDAL is missing or raises an error, install it using:
+
+bash
+Copy code
+python -m pip install gdal
+If a compilation error occurs, use a precompiled .whl file from Unofficial Python Binaries.
+
+3. Download and Install SILAH V045
+a. Obtain the Plugin ZIP File:
+Get the plugin ZIP file for SILAH V045 from the developer or repository.
+b. Install the Plugin in QGIS:
+Open QGIS and go to Plugins > Manage and Install Plugins > Install from ZIP.
+Select the ZIP file for SILAH V045 and install it.
+4. Verify Plugin Installation
+After installation, ensure the plugin loads without errors by:
+Enabling it via Plugins > Manage and Install Plugins.
+Running the plugin from the toolbar.
+5. Troubleshooting
+If the plugin fails to load:
+
+Ensure all libraries are installed (check OSGeo4W Shell by running python and importing the libraries).
+Verify GDAL installation by running:
+python
+Copy code
+import gdal
+print(gdal.__version__)
+Revisit library installation or consult error logs for specifics.
+By following these steps, SILAH V045 should be fully operational on a new computer. Let me know if further clarification is needed!
